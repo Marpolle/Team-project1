@@ -65,10 +65,10 @@ public class CreditAccountTest {
     public void shouldAmountMoreThanCreditLimit() {
         CreditAccount account = new CreditAccount(
                 2_000,
-                4_000,
+                6_000,
                 15
         );
-        account.add(5_000);
+        account.pay(7_000);
         Assertions.assertEquals(0, account.getBalance());
     }
     @Test
