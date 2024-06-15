@@ -49,6 +49,21 @@ public class SavingAccountTest {
     }
 
     @Test
+    public void maxBalanceTakesNegativeValue() {
+        SavingAccount account = new SavingAccount(
+                1_000,
+                1_000,
+                -10_000,
+                5
+        );
+
+        account.add(0_000);
+
+        Assertions.assertEquals(0, account.getBalance());
+    }
+
+
+    @Test
     public void minBalanceMoreThanMaxBalance() {
         SavingAccount account = new SavingAccount(
                 1_000,
