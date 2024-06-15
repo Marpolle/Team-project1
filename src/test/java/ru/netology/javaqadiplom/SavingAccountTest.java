@@ -45,7 +45,7 @@ public class SavingAccountTest {
 
         account.add(0_000);
 
-        Assertions.assertEquals(0, account.getBalance());
+        Assertions.assertEquals(0, account.getMinBalance());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class SavingAccountTest {
 
         account.add(0_000);
 
-        Assertions.assertEquals(0, account.getBalance());
+        Assertions.assertEquals(0, account.getMaxBalance());
     }
 
 
@@ -74,7 +74,7 @@ public class SavingAccountTest {
 
         account.add(0_000);
 
-        Assertions.assertEquals(0, account.getBalance());
+        Assertions.assertEquals(0, account.getMinBalance());
     }
 
     @Test
@@ -88,7 +88,7 @@ public class SavingAccountTest {
 
         account.add(0_000);
 
-        Assertions.assertEquals(0, account.getBalance());
+        Assertions.assertEquals(0, account.getMaxBalance());
     }
 
     @Test
