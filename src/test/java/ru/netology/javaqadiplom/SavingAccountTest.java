@@ -130,7 +130,7 @@ public class SavingAccountTest {
 
         account.pay(8_000);
 
-        Assertions.assertEquals(0_000, account.getBalance());
+        Assertions.assertEquals(7_000, account.getBalance());
     }
 
 
@@ -145,7 +145,7 @@ public class SavingAccountTest {
 
         account.pay(15_000);
 
-        Assertions.assertEquals(0_000, account.getBalance());
+        Assertions.assertEquals(7_000, account.getBalance());
     }
 
     @Test
