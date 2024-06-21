@@ -106,6 +106,21 @@ public class SavingAccountTest {
     }
 
     @Test
+    public void initialBalancelessMinBalance() {
+        SavingAccount account = new SavingAccount(
+                1_000,
+                2_000,
+                5_000,
+                5
+        );
+
+        account.add(0_000);
+
+        Assertions.assertEquals(0, account.getBalance());
+    }
+
+
+    @Test
     public void payTestWork() {
         SavingAccount account = new SavingAccount(
                 7_000,
@@ -210,7 +225,7 @@ public class SavingAccountTest {
                 20_000
         );
 
-        Assertions.assertEquals(0, account.yearChange());
+        Assertions.assertEquals(1_600_000, account.yearChange());
     }
 
 }
