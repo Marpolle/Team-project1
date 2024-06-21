@@ -157,4 +157,14 @@ public class CreditAccountTest {
         Assertions.assertEquals(0, account.yearChange());
     }
 
+    @Test
+    public void shouldIfInitialBalanceEqualsAmount() {
+        CreditAccount account = new CreditAccount(
+                5000,
+                6000,
+                10
+        );
+        account.pay(5000);
+        Assertions.assertEquals(0, account.getBalance());
+    }
 }
