@@ -62,6 +62,7 @@ public class CreditAccount extends Account {
         return true;
     }
 
+
     /**
      * Операция пополнения карты на указанную сумму.
      * В результате успешного вызова этого метода, баланс должен увеличиться
@@ -76,7 +77,7 @@ public class CreditAccount extends Account {
      */
     @Override
     public boolean add(int amount) {
-        if (amount <= 0) {
+         if (amount <= 0) {
             return false;
         }
         balance = balance + amount;
