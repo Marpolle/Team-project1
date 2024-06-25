@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CreditAccountTest {
 
-    @Test
+   @Test
     public void shouldAddToPositiveBalance() {
         CreditAccount account = new CreditAccount(
                 0,

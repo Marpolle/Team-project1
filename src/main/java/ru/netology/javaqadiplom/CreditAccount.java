@@ -52,7 +52,7 @@ public class CreditAccount extends Account {
      */
     @Override
     public boolean pay(int amount) {
-        if (amount <= 0) {
+         if (amount <= 0) {
             return false;
         }
         if (balance - amount < -creditLimit) {
@@ -61,6 +61,7 @@ public class CreditAccount extends Account {
         balance = balance - amount;
         return true;
     }
+
 
     /**
      * Операция пополнения карты на указанную сумму.
