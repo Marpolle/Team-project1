@@ -20,7 +20,7 @@ public class CreditAccountTest {
         Assertions.assertEquals(3_000, account.getBalance());
     }
 
-    @Test
+   @Test
     public void shouldRateMoreThanMax() {
         CreditAccount account = new CreditAccount(
                 1_000,
@@ -157,4 +157,15 @@ public class CreditAccountTest {
         Assertions.assertEquals(0, account.yearChange());
     }
 
+    @Test
+    public void shouldIfInitialBalanceEqualsAmount() {
+        CreditAccount account = new CreditAccount(
+                5000,
+                6000,
+                10
+        );
+        account.pay(5000);
+        Assertions.assertEquals(0, account.getBalance());
+    }
 }
+

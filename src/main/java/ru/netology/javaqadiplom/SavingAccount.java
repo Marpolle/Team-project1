@@ -9,6 +9,7 @@ package ru.netology.javaqadiplom;
 public class SavingAccount extends Account {
     protected int minBalance;
     protected int maxBalance;
+    protected int initialBalance;
 
     /**
      * Создаёт новый объект сберегательного счёта с заданными параметрами.
@@ -24,6 +25,7 @@ public class SavingAccount extends Account {
         if (rate < 0) {
             throw new IllegalArgumentException(
                     "Накопительная ставка не может быть отрицательной, а у вас: " + rate
+
             );
         }
         if (initialBalance < 0) {
@@ -59,8 +61,7 @@ public class SavingAccount extends Account {
         if (initialBalance < minBalance) {
             throw new IllegalArgumentException(
                     "Начальный баланс не может быть меньше, чем Минимальный баланс"
-            );
-        }
+
         this.balance = initialBalance;
         this.minBalance = minBalance;
         this.maxBalance = maxBalance;
@@ -131,6 +132,7 @@ public class SavingAccount extends Account {
     public int yearChange() {
         return balance / 100 * rate;
     }
+
 
     public int getMinBalance() {
         return minBalance;
